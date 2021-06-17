@@ -23,7 +23,7 @@ export default {
     NavbarComponent,
     OverlayComponent,
   },
-
+  
   watch: {
     $route() {
       this.active = true;

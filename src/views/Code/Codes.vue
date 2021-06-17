@@ -10,11 +10,19 @@
     </div>
     <!-- Search Box -->
     <div id="search" class="my-2">
-      <CodeSearchComponent @update:search="search = $event" />
+      <CodeSearchComponent class="tutorial" @update:search="search = $event" />
     </div>
 
     <div id="results" class="flex flex-wrap w-full">
-      <CodeCardComponent v-for="i in 20" :key="i" />
+      <router-link
+        v-for="i in 20"
+        :key="i"
+        tag="div"
+        to="/codes/code/1"
+        class="lg:w-2/6 md:w-3/6 sm:w-6/6 p-4"
+      >
+        <CodeCardComponent class="tutorial" />
+      </router-link>
     </div>
   </div>
 </template>
@@ -31,6 +39,7 @@ export default {
   },
 
   mounted() {
+
     this.$emit("overlay", false);
   },
 

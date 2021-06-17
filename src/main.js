@@ -5,11 +5,13 @@ import './assets/tailwind.css';
 
 import "./styles/index.scss";
 import "./styles/hljs.scss";
+import "./styles/tutorial.scss";
 
 import hljs from "highlight.js";
 Vue.use(hljs.vuePlugin);
 
 new Vue({
   router,
-  render: h => h(App)
+  render: h => h(App),
+  mixins: [import("@/mixins/TutorialMixin.vue")]
 }).$mount('#app');
