@@ -50,6 +50,7 @@
               rounded
               hover:bg-c1
             "
+            @click="copyText(code)"
           >
             Kopyala
           </button>
@@ -127,9 +128,18 @@
 </template>
 
 <script>
+import Clipboard from "@/services/Clipboard.js";
+
 export default {
-  mounted() {
+  async mounted() {
     this.$emit("overlay", false);
+  },
+
+  methods: {
+    copyText(text) {
+      this.$emit("add:toast", { name: "Panoya Kopyalandı", description: "Kod başarılı bir şekilde panoya kopyalandı.", delay: 2500, color: "black" })
+      Clipboard.copyTextToClipboard(text);
+    }
   },
 
   data() {
