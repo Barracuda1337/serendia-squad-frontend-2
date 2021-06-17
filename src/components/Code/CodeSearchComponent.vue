@@ -5,7 +5,7 @@
       class="search-txt"
       type="text"
       name=""
-      placeholder="Aranacak Kod"
+      placeholder="Arama..."
     />
     <router-link to="/codes" class="search-btn">
       <i class="fas fa-search"></i>

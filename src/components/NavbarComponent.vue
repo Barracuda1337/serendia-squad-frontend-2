@@ -53,9 +53,8 @@ export default {
     return {
       navs: [
         { name: "Kodlar", to: "/codes" },
-        { name: "Bağlantılar", to: "/server" },
-        { name: "Yetkili Başvurusu", to: "/server" },
-        { name: "Servisler", to: "/server" },
+        { name: "Yetkili Başvurusu", to: "/authorized" },
+        { name: "Servisler", to: "/services" },
         { name: "S.S.S.", to: "/information" },
       ],
     };

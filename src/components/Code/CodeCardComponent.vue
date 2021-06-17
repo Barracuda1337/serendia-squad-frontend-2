@@ -14,7 +14,7 @@
       cursor-pointer
     "
   >
-    <h1 class="text-xl font-semibold mb-2">Arama Komutu</h1>
+    <h1 class="text-xl font-semibold mb-2">Lorem Ipsum</h1>
     <p class="flex-grow">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, rem nam.
       Provident illum pariatur ipsum officia et voluptatem cum ipsam optio
@@ -52,8 +52,9 @@
       </div>
       <div class="w-2/6 flex flex-row w-full justify-end items-center">
         <img
-          class="h-8 rounded-full mr-1"
+          class="h-8 rounded-full mr-1 bg-c3"
           src="https://cdn.discordapp.com/avatars/558016135052787773/ee15868c2722d7e71af3aa35b3623f21.webp"
+          loading="lazy"
         />
         <span class="font-medium">Alosha#3779</span>
       </div>

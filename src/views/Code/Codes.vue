@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-center">
     <div id="page" class="my-6 text-center">
-      <h1 class="text-5xl font-semibold uppercase mb-2">Kodlar</h1>
+      <h1 class="text-5xl font-semibold uppercase mb-2">Lorem Ipsum</h1>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam inventore
         voluptatibus sint architecto illo adipisci dolore rerum sapiente ipsa
