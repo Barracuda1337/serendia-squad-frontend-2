@@ -13,5 +13,4 @@ Vue.use(hljs.vuePlugin);
 new Vue({
   router,
   render: h => h(App),
-  mixins: [import("@/mixins/TutorialMixin.vue")]
 }).$mount('#app');

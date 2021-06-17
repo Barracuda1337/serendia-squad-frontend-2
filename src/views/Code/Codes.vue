@@ -21,7 +21,7 @@
         to="/codes/code/1"
         class="lg:w-2/6 md:w-3/6 sm:w-6/6 p-4"
       >
-        <CodeCardComponent class="tutorial" />
+        <CodeCardComponent />
       </router-link>
     </div>
   </div>
