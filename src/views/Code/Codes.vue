@@ -29,7 +29,7 @@
         "
       >
         <div class="flex flex-col bg-c2 w-full h-full p-2 rounded-md">
-          <h1 class="text-xl font-semibold">Arama Komutu</h1>
+          <h1 class="text-xl font-semibold mb-2">Arama Komutu</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, rem
             nam. Provident illum pariatur ipsum officia et voluptatem cum ipsam
@@ -38,7 +38,7 @@
           </p>
           <div class="flex flex-row mt-2 w-full items-center">
             <div class="w-4/6 flex flex-row w-full">
-              <div id="heart" class="flex items-center text-xl mx-2">
+              <div id="heart" class="flex items-center text-l mx-1">
                 <svg height="24px" width="24px" viewBox="0 0 24 24">
                   <path
                     fill="currentColor"
@@ -47,7 +47,7 @@
                 </svg>
                 10
               </div>
-              <div id="comments" class="flex items-center text-xl mx-2">
+              <div id="comments" class="flex items-center text-l mx-1">
                 <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
                   <path
                     fill="currentColor"
@@ -56,7 +56,7 @@
                 </svg>
                 10
               </div>
-              <div id="eye" class="flex items-center text-xl mx-2">
+              <div id="eye" class="flex items-center text-l mx-1">
                 <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
                   <path
                     fill="currentColor"
@@ -66,7 +66,13 @@
                 10
               </div>
             </div>
-            <div class="w-2/6">Alosha#3779</div>
+            <div class="w-2/6 flex flex-row w-full justify-end items-center">
+              <img
+                class="h-8 rounded-full mr-1"
+                src="https://cdn.discordapp.com/avatars/558016135052787773/ee15868c2722d7e71af3aa35b3623f21.webp"
+              />
+              <span class="font-medium">Alosha#3779</span>
+            </div>
           </div>
         </div>
       </div>

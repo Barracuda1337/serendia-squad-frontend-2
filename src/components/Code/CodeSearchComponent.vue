@@ -1,14 +1,9 @@
 <template>
   <div class="search-box flex items-center">
-    <input
-      class="search-txt"
-      type="text"
-      name=""
-      placeholder="Aranacak Kod"
-    />
-    <a class="search-btn" href="#">
+    <input class="search-txt" type="text" name="" placeholder="Aranacak Kod" />
+    <router-link to="/codes" class="search-btn">
       <i class="fas fa-search"></i>
-    </a>
+    </router-link>
   </div>
 </template>
 
@@ -47,7 +42,7 @@
   width: 0px;
 }
 .search-box:hover > .search-txt {
-  width: 25vw;
+  width: 50vw;
   padding: 0 6px;
 }
 .search-box:hover > .search-btn {
