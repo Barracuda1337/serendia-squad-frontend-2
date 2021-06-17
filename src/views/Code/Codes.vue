@@ -9,8 +9,8 @@
       </p>
     </div>
     <!-- Search Box -->
-    <div id="search">
-      <CodeSearchComponent />
+    <div id="search" class="my-2">
+      <CodeSearchComponent @update:search="search = $event" />
     </div>
 
     <div id="results" class="flex flex-wrap w-full">
@@ -24,6 +24,12 @@ import CodeSearchComponent from "@/components/Code/CodeSearchComponent.vue";
 import CodeCardComponent from "@/components/Code/CodeCardComponent.vue";
 
 export default {
+  data() {
+    return {
+      search: null,
+    };
+  },
+
   mounted() {
     this.$emit("overlay", false);
   },

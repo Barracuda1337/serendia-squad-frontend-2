@@ -1,11 +1,28 @@
 <template>
   <div class="search-box flex items-center">
-    <input class="search-txt" type="text" name="" placeholder="Aranacak Kod" />
+    <input
+      @input="handleInput"
+      class="search-txt"
+      type="text"
+      name=""
+      placeholder="Aranacak Kod"
+    />
     <router-link to="/codes" class="search-btn">
       <i class="fas fa-search"></i>
     </router-link>
   </div>
 </template>
+
+<script>
+export default {
+  props: ["search"],
+  methods: {
+    handleInput(e) {
+      this.$emit("update:search", e.target.value);
+    },
+  },
+};
+</script>
 
 <style lang="scss">
 .search-box {

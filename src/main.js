@@ -4,6 +4,10 @@ import router from './router';
 import './assets/tailwind.css';
 
 import "./styles/index.scss";
+import "./styles/hljs.scss";
+
+import hljs from "highlight.js";
+Vue.use(hljs.vuePlugin);
 
 new Vue({
   router,
