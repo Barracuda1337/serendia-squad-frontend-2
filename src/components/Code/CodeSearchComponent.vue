@@ -42,7 +42,7 @@
   width: 0px;
 }
 .search-box:hover > .search-txt {
-  width: 50vw;
+  width: 300px;
   padding: 0 6px;
 }
 .search-box:hover > .search-btn {
