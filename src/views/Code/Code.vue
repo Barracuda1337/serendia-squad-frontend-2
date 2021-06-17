@@ -1,43 +1,140 @@
 <template>
-  <div class="flex flex-col w-full" id="code">
-      <div class="flex flex-col items-center text-center" id="header">
-          <h1 class="text-5xl font-semibold mb-2">Shely'i Yarma Komutu</h1>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit ipsam natus officia quidem magni inventore, laudantium, minima quisquam mollitia similique ipsa cumque eum doloribus hic maxime velit obcaecati aut nihil.</p>
+  <div class="flex flex-col w-full my-6" id="code">
+    <div class="flex flex-col items-center text-center my-2" id="header">
+      <h1 class="text-5xl font-semibold mb-4">Shely'i Yarma Komutu</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit ipsam
+        natus officia quidem magni inventore, laudantium, minima quisquam
+        mollitia similique ipsa cumque eum doloribus hic maxime velit obcaecati
+        aut nihil.
+      </p>
+    </div>
+    <div class="flex flex-row w-full">
+      <div class="w-2/6 p-2">
+        <div class="bg-c2 p-4 rounded">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero
+          molestiae aspernatur in repudiandae placeat maiores quasi maxime
+          numquam! Consequuntur similique inventore sint cumque est nam impedit
+          sit odio ratione?
+        </div>
       </div>
-      <div class="my-4 flex flex-row w-full">
-          <div class="w-2/6 p-2">
-            <div class="bg-c2 p-4 rounded">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero molestiae aspernatur in repudiandae placeat maiores quasi maxime numquam! Consequuntur similique inventore sint cumque est nam impedit sit odio ratione?
-            </div>
-          </div>
-          <div class="w-2/6 p-2">
-            <div class="bg-c2 p-4 rounded">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero molestiae aspernatur in repudiandae placeat maiores quasi maxime numquam! Consequuntur similique inventore sint cumque est nam impedit sit odio ratione?
-            </div>
-          </div>
-          <div class="w-2/6 p-2">
-            <div class="bg-c2 p-4 rounded">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero molestiae aspernatur in repudiandae placeat maiores quasi maxime numquam! Consequuntur similique inventore sint cumque est nam impedit sit odio ratione?
-            </div>
-          </div>
+      <div class="w-2/6 p-2">
+        <div class="bg-c2 p-4 rounded">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero
+          molestiae aspernatur in repudiandae placeat maiores quasi maxime
+          numquam! Consequuntur similique inventore sint cumque est nam impedit
+          sit odio ratione?
+        </div>
       </div>
-      <div class="flex flex-col w-full p-2">
-          <div class="w-full p-4 bg-c2 rounded" id="code">
-              <highlightjs theme language="javascript" :code="code" />
-          </div>
+      <div class="w-2/6 p-2">
+        <div class="bg-c2 p-4 rounded">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero
+          molestiae aspernatur in repudiandae placeat maiores quasi maxime
+          numquam! Consequuntur similique inventore sint cumque est nam impedit
+          sit odio ratione?
+        </div>
       </div>
+    </div>
+    <div class="flex flex-col w-full p-2">
+      <div class="w-full p-4 bg-c2 rounded" id="code">
+        <highlightjs theme language="javascript" :code="code" />
+        <div class="w-full mt-4">
+          <button
+            class="
+              focus:outline-none
+              m-1
+              p-2
+              w-24
+              bg-c3
+              transition
+              rounded
+              hover:bg-c1
+            "
+          >
+            Kopyala
+          </button>
+          <button
+            class="
+              focus:outline-none
+              float-right
+              m-1
+              p-2
+              w-24
+              bg-red-600
+              transition
+              rounded
+              hover:bg-red-900
+            "
+          >
+            Sil
+          </button>
+          <button
+            class="
+              focus:outline-none
+              float-right
+              m-1
+              p-2
+              w-24
+              bg-c3
+              transition
+              rounded
+              hover:bg-c1
+            "
+          >
+            Düzenle
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="w-full p-2">
+      <div class="flex flex-col w-full bg-c2 p-4 rounded">
+        <h1 class="uppercase text-2xl font-medium mb-2">Yorumlar</h1>
+        <textarea
+          class="
+            bg-c3
+            transition
+            text-2xl
+            p-2
+            focus:outline-none
+            focus:ring focus:ring-c1
+            focus:border-c3
+            h-min
+            rounded
+          "
+          placeholder="Yorumunu belirt..."
+        ></textarea>
+
+        <div class="w-full mt-4">
+          <button
+            class="
+              focus:outline-none
+              float-right
+              m-1
+              p-2
+              w-24
+              bg-c3
+              transition
+              rounded
+              hover:bg-c1
+            "
+          >
+            Gönder
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   mounted() {
-      this.$emit("overlay", false);
+    this.$emit("overlay", false);
   },
 
   data() {
-      return {
-          code: `const { Mongosha } = require("mongosha");
+    return {
+      code: `const { Mongosha } = require("mongosha");
 
 const client = await Mongosha.connect("MONGODB_CONNECTION_STRING");
 const db = client.database("example_database");
@@ -73,8 +170,8 @@ data.sort("favorite_numbers", "DESC"); // => [30, 10, 10, 6, 5, 4, 3, 2, 1]
 data.has("wallet"); // => true
 data.has("mail"); // => false
 data.has("otherField"); // => false
-`
-      };
-  }
+`,
+    };
+  },
 };
 </script>

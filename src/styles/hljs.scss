@@ -2,8 +2,13 @@
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  background: #333;
+  background: rgba($color: #000000, $alpha: 0.2);
+  border-radius: 0.25rem;
   color: white;
+
+  * {
+    font-family: monospace;
+  }
 }
 
 .hljs-name,
