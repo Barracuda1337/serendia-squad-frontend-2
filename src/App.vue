@@ -3,7 +3,7 @@
     <OverlayComponent :active="active" />
     <ToastComponent :list="list" align="top-right" />
     <NavbarComponent />
-    <div class="container">
+    <div class="lg:container md:container sm:container sm:max-w-full sm:px-4">
       <router-view @add:toast="list.push($event)" @overlay="active = $event" />
     </div>
   </div>

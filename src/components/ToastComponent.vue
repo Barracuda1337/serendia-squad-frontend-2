@@ -22,10 +22,11 @@
 
 <style lang="scss">
 .toast {
-  animation-name: come;
+  animation-name: fade;
   animation-duration: 1s;
 }
-@keyframes come {
+
+@keyframes fade {
   from {
     opacity: 0;
   }
@@ -42,7 +43,7 @@ export default {
   watch: {
     list() {
       let item = this.list[this.list.length - 1];
-      setTimeout(() => {
+      setTimeout(async () => {
         this.list = this.list.splice(
           this.list.findIndex((e) => e == item),
           1

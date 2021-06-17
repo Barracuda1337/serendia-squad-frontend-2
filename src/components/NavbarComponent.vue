@@ -24,6 +24,8 @@
             h-14
             hover:bg-c3
             hover:text-c4
+            hidden
+            md:block
           "
         >
           {{ nav.name }}
@@ -39,9 +41,32 @@
           h-14
           hover:bg-c3
           hover:text-c4
+          hidden
+          md:block
         "
       >
         Giriş Yap
+      </div>
+      <div
+        class="
+          flex
+          items-center
+          cursor-pointer
+          p-4
+          transition
+          hover:bg-c3
+          hover:text-c4
+          block
+          h-14
+          md:hidden
+        "
+      >
+        <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"
+          />
+        </svg>
       </div>
     </div>
   </div>

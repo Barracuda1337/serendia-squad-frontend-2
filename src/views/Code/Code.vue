@@ -9,8 +9,8 @@
         aut nihil.
       </p>
     </div>
-    <div class="flex flex-row w-full">
-      <div class="w-2/6 p-2">
+    <div class="lg:flex lg:flex-row md:flex md:flex-col sm:flex sm:flex-col w-full">
+      <div class="lg:w-2/6 md:w-full p-2">
         <div class="bg-c2 p-4 rounded">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero
           molestiae aspernatur in repudiandae placeat maiores quasi maxime
@@ -18,7 +18,7 @@
           sit odio ratione?
         </div>
       </div>
-      <div class="w-2/6 p-2">
+      <div class="lg:w-2/6 md:w-full sm:w-full p-2">
         <div class="bg-c2 p-4 rounded">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero
           molestiae aspernatur in repudiandae placeat maiores quasi maxime
@@ -26,7 +26,7 @@
           sit odio ratione?
         </div>
       </div>
-      <div class="w-2/6 p-2">
+      <div class="lg:w-2/6 md:w-full sm:w-full p-2">
         <div class="bg-c2 p-4 rounded">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero
           molestiae aspernatur in repudiandae placeat maiores quasi maxime
