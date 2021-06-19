@@ -1,15 +1,36 @@
 <template>
   <div class="bg-c2">
-    <div class="navbar container mb-4 px-4 flex w-full items-center">
+    <div
+      class="
+        navbar
+        container
+        mb-4
+        px-4
+        flex flex-col
+        sm:flex-row
+        w-full
+        items-center
+      "
+    >
       <router-link
         to="/"
-        class="cursor-pointer flex-shrink blank mr-2 font-semibold text-xl"
+        class="
+          w-full
+          sm:w-max
+          text-center
+          cursor-pointer
+          flex-shrink
+          blank
+          mr-2
+          font-semibold
+          text-xl
+        "
       >
         Serendia Squad
       </router-link>
 
       <div
-        class="flex-none sm:flex items-center flex-shrink"
+        class="flex-none w-full sm:w-max sm:flex items-center flex-shrink"
         v-bind:class="{ hidden: !active }"
       >
         <!-- Nav Items -->
@@ -26,11 +47,35 @@
             h-14
             hover:bg-c3
             hover:text-c4
+            w-full
             sm:block
+            sm:w-max
           "
         >
           {{ nav.name }}
         </router-link>
+        <template v-if="active">
+          <router-link
+            v-for="(nav, i) in activeNavs"
+            :key="i"
+            :to="nav.to"
+            class="
+              flex
+              items-center
+              cursor-pointer
+              p-4
+              transition
+              h-14
+              hover:bg-c3
+              hover:text-c4
+              w-full
+              sm:block
+              sm:w-max
+            "
+          >
+            {{ nav.name }}
+          </router-link>
+        </template>
       </div>
       <div class="flex flex-grow justify-end">
         <div
@@ -62,7 +107,9 @@
             hover:text-c4
             block
             h-14
-            md:hidden
+            w-full
+            sm:w-max
+            sm:hidden
           "
         >
           <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
@@ -86,6 +133,12 @@ export default {
         { name: "Yetkili Başvurusu", to: "/authorized" },
         { name: "Servisler", to: "/services" },
         { name: "S.S.S.", to: "/information" },
+      ],
+      activeNavs: [
+        {
+          name: "Giriş Yap",
+          to: "/login",
+        },
       ],
       active: false,
     };
