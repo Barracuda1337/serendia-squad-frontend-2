@@ -50,5 +50,6 @@ async function getCodes(page) {
 export default {
     deleteCode,
     updateCode,
-    sendCode
+    sendCode,
+    getCodes
 }
