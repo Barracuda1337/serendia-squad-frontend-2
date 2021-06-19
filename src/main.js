@@ -10,6 +10,9 @@ import "./styles/tutorial.scss";
 import hljs from "highlight.js";
 Vue.use(hljs.vuePlugin);
 
+import axios from 'axios';
+Vue.prototype.$http = axios;
+
 new Vue({
   router,
   render: h => h(App),

@@ -31,15 +31,23 @@
 import CodeSearchComponent from "@/components/Code/CodeSearchComponent.vue";
 import CodeCardComponent from "@/components/Code/CodeCardComponent.vue";
 
+import CodeService from "@/services/CodeService.js";
+
 export default {
   data() {
     return {
       search: null,
+      page: 1
     };
   },
 
-  mounted() {
+  methods: {
+    async getCodes() {
+      return CodeService.getCodes(this.page);
+    }
+  },
 
+  mounted() {
     this.$emit("overlay", false);
   },
 

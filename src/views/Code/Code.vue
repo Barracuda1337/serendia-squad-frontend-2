@@ -93,6 +93,7 @@
       <div class="flex flex-col w-full bg-c2 p-4 rounded">
         <h1 class="uppercase text-2xl font-medium mb-2">Yorumlar</h1>
         <textarea
+          v-model="comment"
           class="
             bg-c3
             transition
@@ -131,13 +132,29 @@
 
 <script>
 import Clipboard from "@/services/Clipboard.js";
+import CodeService from "@/services/CodeService.js";
 
 export default {
   async mounted() {
     this.$emit("overlay", false);
   },
 
+  props: {
+    user: {
+      type: Object,
+      default: null,
+      required: true
+    }
+  },
+
   methods: {
+    deleteCode() {
+      if (!this.code.id || !this.user || this.user == null) {
+        return;
+      }
+
+      CodeService.deleteCode(this.code.id);
+    },
     copyText(text) {
       this.$emit("add:toast", {
         name: "Panoya Kopyalandı",
@@ -188,6 +205,7 @@ data.has("wallet"); // => true
 data.has("mail"); // => false
 data.has("otherField"); // => false
 `,
+      comment: null,
     };
   },
 };
