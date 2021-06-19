@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       active: true,
-      list: []
+      list: [],
     };
   },
 
@@ -27,7 +27,7 @@ export default {
     OverlayComponent,
     ToastComponent,
   },
-  
+
   watch: {
     $route() {
       this.active = true;

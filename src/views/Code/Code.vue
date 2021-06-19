@@ -9,7 +9,9 @@
         aut nihil.
       </p>
     </div>
-    <div class="lg:flex lg:flex-row md:flex md:flex-col sm:flex sm:flex-col w-full">
+    <div
+      class="lg:flex lg:flex-row md:flex md:flex-col sm:flex sm:flex-col w-full"
+    >
       <div class="lg:w-2/6 md:w-full p-2">
         <div class="bg-c2 p-4 rounded">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero
@@ -137,9 +139,14 @@ export default {
 
   methods: {
     copyText(text) {
-      this.$emit("add:toast", { name: "Panoya Kopyalandı", description: "Kod başarılı bir şekilde panoya kopyalandı.", delay: 2500, color: "black" })
+      this.$emit("add:toast", {
+        name: "Panoya Kopyalandı",
+        description: "Kod başarılı bir şekilde panoya kopyalandı.",
+        delay: 2500,
+        color: "black",
+      });
       Clipboard.copyTextToClipboard(text);
-    }
+    },
   },
 
   data() {
