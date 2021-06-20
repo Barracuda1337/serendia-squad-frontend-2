@@ -16,6 +16,8 @@
         to="/"
         class="
           w-full
+          mt-2
+          sm:mt-0
           sm:w-max
           text-center
           cursor-pointer
@@ -89,7 +91,7 @@
             hover:bg-c3
             hover:text-c4
             hidden
-            md:block
+            sm:block
           "
         >
           Giriş Yap
@@ -105,9 +107,9 @@
             transition
             hover:bg-c3
             hover:text-c4
-            block
             h-14
             w-full
+            block
             sm:w-max
             sm:hidden
           "
