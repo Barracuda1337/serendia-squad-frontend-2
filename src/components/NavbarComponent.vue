@@ -39,7 +39,7 @@
           <router-link v-if="!nav.dropdown" v-bind:key="i" :to="nav.to">
             <div
               class="
-                flex
+                flex flex-col
                 items-center
                 cursor-pointer
                 p-4
@@ -86,7 +86,11 @@
                     d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
                   />
                 </svg>
-                <svg v-else style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                <svg
+                  v-else
+                  style="width: 24px; height: 24px"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     fill="currentColor"
                     d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z"
@@ -162,24 +166,24 @@ export default {
     return {
       navs: [
         {
-          name: "Projeler",
-          to: "/projects",
-          dropdown: true,
-          items: ["Discord", "Website", "Uygulama", "Diğer"],
-          active: false,
-        },
-        {
           name: "Kodlar",
           to: "/codes",
           dropdown: true,
-          items: ["JavaScript", "HTML/CSS", "C#"],
+          items: [
+            { name: "JavaScript", to: "/codes" },
+            { name: "TypeScript", to: "/codes" },
+            { name: "HTML/CSS", to: "/codes" },
+          ],
           active: false,
         },
         {
           name: "Servisler",
           to: "/services",
           dropdown: true,
-          items: ["Kod Çevirici", "Uptime Servisi"],
+          items: [
+            { name: "Kod Çevirici", to: "/codes" },
+            { name: "Uptime", to: "/codes" },
+          ],
           active: false,
         },
         { name: "S.S.S.", to: "/information", dropdown: false, active: false },
