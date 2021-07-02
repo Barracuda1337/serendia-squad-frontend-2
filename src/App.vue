@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="h-full">
-    <OverlayComponent :active="active" />
+    <OverlayComponent class="z-10" :active="active" />
     <ToastComponent :list="list" align="top-right" />
     <NavbarComponent />
     <div class="lg:container md:container sm:container sm:max-w-full sm:px-4">

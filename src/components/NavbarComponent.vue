@@ -35,55 +35,66 @@
         class="flex-none w-full sm:w-max sm:flex items-center flex-shrink"
         v-bind:class="{ hidden: !active }"
       >
-        <!-- Nav Items -->
-        <router-link v-for="(nav, i) in navs" :key="i" :to="nav.to">
-          <div
-            v-bind:class="{ relative: nav.dropdown }"
-            v-on:click="nav.active = !nav.active"
-            class="
-              flex
-              items-center
-              cursor-pointer
-              p-4
-              transition
-              h-14
-              hover:bg-c3
-              hover:text-c4
-              w-full
-              sm:block
-              sm:w-max
-            "
-          >
-            {{ nav.name }}
-            <Dropdown
-              v-if="nav.dropdown"
-              :status="nav.active"
-              :items="nav.items || []"
-            />
-          </div>
-        </router-link>
-        <template v-if="active">
-          <router-link
-            v-for="(nav, i) in activeNavs"
-            :key="i"
-            :to="nav.to"
-            class="
-              flex
-              items-center
-              cursor-pointer
-              p-4
-              transition
-              h-14
-              hover:bg-c3
-              hover:text-c4
-              w-full
-              sm:block
-              sm:w-max
-            "
-          >
-            {{ nav.name }}
+        <template v-for="(nav, i) in navs">
+          <router-link v-if="!nav.dropdown" v-bind:key="i" :to="nav.to">
+            <div
+              class="
+                flex
+                items-center
+                cursor-pointer
+                p-4
+                transition
+                h-14
+                hover:bg-c3
+                hover:text-c4
+                w-full
+                sm:block
+                sm:w-max
+              "
+            >
+              {{ nav.name }}
+            </div>
           </router-link>
+          <div v-bind:key="i" v-else>
+            <div
+              v-bind:class="{ relative: nav.dropdown }"
+              v-on:click="nav.active = !nav.active"
+              class="
+                flex
+                items-center
+                cursor-pointer
+                p-4
+                transition
+                h-14
+                hover:bg-c3
+                hover:text-c4
+                w-full
+                sm:block
+                sm:w-max
+              "
+            >
+              <div class="flex items-center justify-between">
+                {{ nav.name }}
+                <svg
+                  v-if="nav.dropdown"
+                  style="width: 24px; height: 24px"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                  />
+                </svg>
+              </div>
+              <Dropdown
+                v-if="nav.dropdown"
+                :status="nav.active"
+                :items="nav.items || []"
+              />
+            </div>
+          </div>
         </template>
+        <!-- Nav Items -->
       </div>
       <div class="flex flex-grow justify-end">
         <div
@@ -139,30 +150,31 @@ export default {
   components: {
     Dropdown,
   },
-  methods: {
-    test() {
-      console.log("tst");
-    },
-  },
   data() {
     return {
       navs: [
-        { name: "Projeler", to: "/projects", dropdown: false, active: false },
+        {
+          name: "Projeler",
+          to: "/projects",
+          dropdown: true,
+          items: ["Discord", "Website", "Uygulama", "Diğer"],
+          active: false,
+        },
         {
           name: "Kodlar",
           to: "/codes",
           dropdown: true,
-          items: ["hello", "wolrd"],
+          items: ["JavaScript", "HTML/CSS", "C#"],
           active: false,
         },
-        { name: "Servisler", to: "/services", dropdown: false, active: false },
-        { name: "S.S.S.", to: "/information", dropdown: false, active: false },
-      ],
-      activeNavs: [
         {
-          name: "Giriş Yap",
-          to: "/login",
+          name: "Servisler",
+          to: "/services",
+          dropdown: true,
+          items: ["Kod Çevirici", "Uptime Servisi"],
+          active: false,
         },
+        { name: "S.S.S.", to: "/information", dropdown: false, active: false },
       ],
       active: false,
     };
