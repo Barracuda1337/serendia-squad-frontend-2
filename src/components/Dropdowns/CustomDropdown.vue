@@ -1,6 +1,6 @@
 <template>
   <div
-    class="absolute w-48 -mt-2 bottom-0 left-0 transform translate-y-full"
+    class="sm:absolute sm:-mt-2 sm:bottom-0 sm:left-0 sm:transform sm:translate-y-full"
     v-bind:class="{ hidden: !this.status }"
   >
     <div class="py-2 bg-c2 rounded-lg">

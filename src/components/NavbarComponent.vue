@@ -60,12 +60,13 @@
               v-bind:class="{ relative: nav.dropdown }"
               v-on:click="nav.active = !nav.active"
               class="
-                flex
+                flex flex-col
                 items-center
                 cursor-pointer
                 p-4
                 transition
-                h-14
+                h-auto
+                sm:h-14
                 hover:bg-c3
                 hover:text-c4
                 w-full
@@ -76,7 +77,7 @@
               <div class="flex items-center justify-between">
                 {{ nav.name }}
                 <svg
-                  v-if="nav.dropdown"
+                  v-if="!nav.active"
                   style="width: 24px; height: 24px"
                   viewBox="0 0 24 24"
                 >
@@ -85,8 +86,15 @@
                     d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
                   />
                 </svg>
+                <svg v-else style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z"
+                  />
+                </svg>
               </div>
               <Dropdown
+                class="w-full sm:w-48"
                 v-if="nav.dropdown"
                 :status="nav.active"
                 :items="nav.items || []"
