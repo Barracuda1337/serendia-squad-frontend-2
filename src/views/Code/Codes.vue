@@ -9,8 +9,15 @@
       </p>
     </div>
     <!-- Search Box -->
-    <div id="search" class="my-2">
+    <div id="search" class="flex flex-col items-center my-2">
       <CodeSearchComponent class="tutorial" @update:search="search = $event" />
+      <div id="shortcuts" class="mt-2 text-center justify-center flex flex-wrap w-6/6">
+        <div class="p-2 bg-c2 cursor-pointer transition hover:bg-c3 rounded m-1">En Çok Beğenilen</div>
+        <div class="p-2 bg-c2 cursor-pointer transition hover:bg-c3 rounded m-1">En Çok Yorumlanan</div>
+        <div class="p-2 bg-c2 cursor-pointer transition hover:bg-c3 rounded m-1">En Çok Görüntülenen</div>
+        <div class="p-2 bg-c2 cursor-pointer transition hover:bg-c3 rounded m-1">En Yeni</div>
+        <div class="p-2 bg-c2 cursor-pointer transition hover:bg-c3 rounded m-1">En Eski</div>
+      </div>
     </div>
 
     <div id="results" class="flex flex-wrap w-full">
@@ -37,14 +44,14 @@ export default {
   data() {
     return {
       search: null,
-      page: 1
+      page: 1,
     };
   },
 
   methods: {
     async getCodes() {
       return CodeService.getCodes(this.page);
-    }
+    },
   },
 
   mounted() {
