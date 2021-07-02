@@ -143,8 +143,8 @@ export default {
     user: {
       type: Object,
       default: null,
-      required: true
-    }
+      required: true,
+    },
   },
 
   methods: {
@@ -168,6 +168,7 @@ export default {
 
   data() {
     return {
+      active: false,
       code: `const { Mongosha } = require("mongosha");
 
 const client = await Mongosha.connect("MONGODB_CONNECTION_STRING");
