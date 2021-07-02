@@ -36,25 +36,31 @@
         v-bind:class="{ hidden: !active }"
       >
         <!-- Nav Items -->
-        <router-link
-          v-for="(nav, i) in navs"
-          :key="i"
-          :to="nav.to"
-          class="
-            flex
-            items-center
-            cursor-pointer
-            p-4
-            transition
-            h-14
-            hover:bg-c3
-            hover:text-c4
-            w-full
-            sm:block
-            sm:w-max
-          "
-        >
-          {{ nav.name }}
+        <router-link v-for="(nav, i) in navs" :key="i" :to="nav.to">
+          <div
+            v-bind:class="{ relative: nav.dropdown }"
+            v-on:click="nav.active = !nav.active"
+            class="
+              flex
+              items-center
+              cursor-pointer
+              p-4
+              transition
+              h-14
+              hover:bg-c3
+              hover:text-c4
+              w-full
+              sm:block
+              sm:w-max
+            "
+          >
+            {{ nav.name }}
+            <Dropdown
+              v-if="nav.dropdown"
+              :status="nav.active"
+              :items="nav.items || []"
+            />
+          </div>
         </router-link>
         <template v-if="active">
           <router-link
@@ -127,13 +133,30 @@
 </template>
 
 <script>
+import Dropdown from "@/components/Dropdowns/CustomDropdown.vue";
+
 export default {
+  components: {
+    Dropdown,
+  },
+  methods: {
+    test() {
+      console.log("tst");
+    },
+  },
   data() {
     return {
       navs: [
-        { name: "Kodlar", to: "/codes" },
-        { name: "Servisler", to: "/services" },
-        { name: "S.S.S.", to: "/information" },
+        { name: "Projeler", to: "/projects", dropdown: false, active: false },
+        {
+          name: "Kodlar",
+          to: "/codes",
+          dropdown: true,
+          items: ["hello", "wolrd"],
+          active: false,
+        },
+        { name: "Servisler", to: "/services", dropdown: false, active: false },
+        { name: "S.S.S.", to: "/information", dropdown: false, active: false },
       ],
       activeNavs: [
         {

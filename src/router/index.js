@@ -19,7 +19,7 @@ const routes = [
     path: '/codes/code/:id',
     name: 'Code',
     component: () => import('../views/Code/Code.vue')
-  },
+  }
 ];
 
 const router = new VueRouter({
