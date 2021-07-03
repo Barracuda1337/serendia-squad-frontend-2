@@ -186,7 +186,7 @@ export default {
           ],
           active: false,
         },
-        { name: "S.S.S.", to: "/information", dropdown: false, active: false },
+        { name: "S.S.S.", to: "/faq", dropdown: false, active: false },
       ],
       active: false,
     };

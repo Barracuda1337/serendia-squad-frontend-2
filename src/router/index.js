@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-
 Vue.use(VueRouter);
 
 const routes = [
@@ -19,6 +18,11 @@ const routes = [
     path: '/codes/code/:id',
     name: 'Code',
     component: () => import('../views/Code/Code.vue')
+  },
+  {
+    path: '/faq',
+    name: 'FAQ',
+    component: () => import('../views/Faq.vue')
   }
 ];
 
