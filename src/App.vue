@@ -3,6 +3,7 @@
     <OverlayComponent class="z-10" :active="active" />
     <ToastComponent :list="list" align="top-right" />
     <NavbarComponent />
+    <DefaultModal />
     <div class="lg:container md:container sm:container sm:max-w-full sm:px-4">
       <router-view @add:toast="list.push($event)" @overlay="active = $event" />
     </div>
@@ -13,6 +14,7 @@
 import NavbarComponent from "@/components/NavbarComponent.vue";
 import OverlayComponent from "@/components/OverlayComponent.vue";
 import ToastComponent from "@/components/ToastComponent.vue";
+import DefaultModal from "@/components/Modals/DefaultModal.vue";
 
 export default {
   data() {
@@ -26,6 +28,7 @@ export default {
     NavbarComponent,
     OverlayComponent,
     ToastComponent,
+    DefaultModal,
   },
 
   watch: {
