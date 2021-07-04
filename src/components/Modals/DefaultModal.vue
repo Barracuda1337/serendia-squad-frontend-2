@@ -63,6 +63,8 @@
 </template>
 
 <script>
+import eventHub from '@/services/EventHub'
+
 export default {
   data() {
     return {
@@ -83,8 +85,7 @@ export default {
     },
   },
   mounted() {
-    this.$on("modal", (id, header, description) => {
-      this.active = false;
+    eventHub.$on("modal", (id, header, description) => {
       this.header = header;
       this.description = description;
       this.currentId = id;

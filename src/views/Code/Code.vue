@@ -68,6 +68,7 @@
               rounded
               hover:bg-red-900
             "
+            @click="deleteCode()"
           >
             Sil
           </button>
@@ -133,6 +134,7 @@
 <script>
 import Clipboard from "@/services/Clipboard.js";
 import CodeService from "@/services/CodeService.js";
+import eventHub from '@/services/EventHub'
 
 export default {
   async mounted() {
@@ -143,17 +145,21 @@ export default {
     user: {
       type: Object,
       default: null,
-      required: true,
     },
   },
 
   methods: {
     deleteCode() {
-      if (!this.code.id || !this.user || this.user == null) {
-        return;
-      }
-
-      CodeService.deleteCode(this.code.id);
+      // if (!this.code.id || !this.user || this.user == null) {
+      //   return;
+      // }
+      let id = `delete-code-${this.code.id}`;
+      eventHub.$once(id, (result) => {
+        if (result == true) {
+          CodeService.deleteCode(this.code.id);
+        }
+      });
+      eventHub.$emit("modal", id, "Bu kodu silmek istediğinizden emin misiniz?", "Bu kodu silerseniz geri dönüşü olmayacaktır.")
     },
     copyText(text) {
       this.$emit("add:toast", {
