@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col w-full my-6" id="code">
     <div class="flex flex-col items-center text-center my-2" id="header">
-      <h1 class="text-5xl font-semibold mb-4">Shely'i Yarma Komutu</h1>
+      <h1 class="text-5xl font-semibold mb-4">Lorem Ipsum</h1>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit ipsam
         natus officia quidem magni inventore, laudantium, minima quisquam
