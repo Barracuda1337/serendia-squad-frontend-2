@@ -171,8 +171,19 @@ export default {
           dropdown: true,
           items: [
             { name: "JavaScript", to: "/codes" },
-            { name: "TypeScript", to: "/codes" },
             { name: "HTML/CSS", to: "/codes" },
+            { name: "Diğer", to: "/codes" },
+          ],
+          active: false,
+        },
+        {
+          name: "Özel Kodlar",
+          to: "/codes",
+          dropdown: true,
+          items: [
+            { name: "Hazır Altyapılar", to: "/codes" },
+            { name: "Elmas", to: "/codes" },
+            { name: "Altın", to: "/codes" },
           ],
           active: false,
         },
@@ -181,8 +192,9 @@ export default {
           to: "/services",
           dropdown: true,
           items: [
-            { name: "Kod Çevirici", to: "/codes" },
             { name: "Uptime", to: "/codes" },
+            { name: "Kod Çevirici", to: "/codes" },
+            { name: "Basit Araçlar", to: "/codes" },
           ],
           active: false,
         },

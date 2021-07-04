@@ -1,13 +1,15 @@
 <template>
   <div class="flex flex-col w-full my-6" id="code">
     <div class="flex flex-col items-center text-center my-2" id="header">
-      <h1 class="text-5xl font-semibold mb-4">Lorem Ipsum</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit ipsam
+      <h1 class="text-5xl font-semibold mb-4" v-text="'Lorem Ipsum'"></h1>
+      <p
+        v-text="
+          `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit ipsam
         natus officia quidem magni inventore, laudantium, minima quisquam
         mollitia similique ipsa cumque eum doloribus hic maxime velit obcaecati
-        aut nihil.
-      </p>
+        aut nihil.`
+        "
+      ></p>
     </div>
     <div
       class="lg:flex lg:flex-row md:flex md:flex-col sm:flex sm:flex-col w-full"
@@ -134,7 +136,7 @@
 <script>
 import Clipboard from "@/services/Clipboard.js";
 import CodeService from "@/services/CodeService.js";
-import eventHub from '@/services/EventHub'
+import eventHub from "@/services/EventHub";
 
 export default {
   async mounted() {
@@ -159,7 +161,12 @@ export default {
           CodeService.deleteCode(this.code.id);
         }
       });
-      eventHub.$emit("modal", id, "Bu kodu silmek istediğinizden emin misiniz?", "Bu kodu silerseniz geri dönüşü olmayacaktır.")
+      eventHub.$emit(
+        "modal",
+        id,
+        "Bu kodu silmek istediğinizden emin misiniz?",
+        "Bu kodu silerseniz geri dönüşü olmayacaktır."
+      );
     },
     copyText(text) {
       this.$emit("add:toast", {

@@ -104,6 +104,11 @@
         <CodeCardComponent />
       </router-link>
     </div>
+    <div class="my-4 flex flex-wrap w-full justify-center">
+      <button @click="page -= 1" class="p-2 rounded-l text-center bg-c2 w-10 text-xl hover:bg-c3 text-semibold focus:outline-none" v-text="'<'"></button>
+      <button v-for="i in Math.max(page * 7 - 7, page * 7, 1)" :key="i" class="text-center p-2 w-10 hover:bg-c3 text-xl text-semibold bg-c2 focus:outline-none" v-text="i"></button>
+      <button @click="page += 1" class="p-2 w-10 rounded-r text-center bg-c2 text-xl hover:bg-c3 text-semibold focus:outline-none" v-text="'>'"></button>
+    </div>
   </div>
 </template>
 
@@ -118,6 +123,7 @@ export default {
     return {
       search: null,
       page: 1,
+      pageCount: 200,
     };
   },
 
