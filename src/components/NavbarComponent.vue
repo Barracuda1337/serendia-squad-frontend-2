@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-c2">
+  <nav class="bg-c2">
     <div
       class="
         navbar
@@ -152,7 +152,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 </template>
 
 <script>

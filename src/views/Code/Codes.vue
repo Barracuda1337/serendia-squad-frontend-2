@@ -99,15 +99,58 @@
         :key="i"
         tag="div"
         to="/codes/code/1"
-        class="lg:w-2/6 md:w-3/6 sm:w-6/6 p-4"
+        class="sm:w-6/6 md:w-3/6 lg:w-2/6 p-4"
       >
         <CodeCardComponent />
       </router-link>
     </div>
     <div class="my-4 flex flex-wrap w-full justify-center">
-      <button @click="page -= 1" class="p-2 rounded-l text-center bg-c2 w-10 text-xl hover:bg-c3 text-semibold focus:outline-none" v-text="'<'"></button>
-      <button v-for="i in Math.max(page * 7 - 7, page * 7, 1)" :key="i" class="text-center p-2 w-10 hover:bg-c3 text-xl text-semibold bg-c2 focus:outline-none" v-text="i"></button>
-      <button @click="page += 1" class="p-2 w-10 rounded-r text-center bg-c2 text-xl hover:bg-c3 text-semibold focus:outline-none" v-text="'>'"></button>
+      <button
+        @click="updatePage(page.currentPage - 1)"
+        class="
+          p-2
+          rounded-l
+          text-center
+          bg-c2
+          w-10
+          text-xl
+          hover:bg-c3
+          text-semibold
+          focus:outline-none
+        "
+        v-text="'<'"
+      ></button>
+      <button
+        v-for="(v, i) in page.pages"
+        :key="i"
+        class="
+          text-center
+          p-2
+          w-10
+          hover:bg-c3
+          text-xl text-semibold
+          bg-c2
+          focus:outline-none
+        "
+        v-bind:class="{ 'bg-c3': v == page.currentPage }"
+        @click="updatePage(v)"
+        v-text="v"
+      ></button>
+      <button
+        @click="updatePage(page.currentPage + 1)"
+        class="
+          p-2
+          w-10
+          rounded-r
+          text-center
+          bg-c2
+          text-xl
+          hover:bg-c3
+          text-semibold
+          focus:outline-none
+        "
+        v-text="'>'"
+      ></button>
     </div>
   </div>
 </template>
@@ -115,6 +158,7 @@
 <script>
 import CodeSearchComponent from "@/components/Code/CodeSearchComponent.vue";
 import CodeCardComponent from "@/components/Code/CodeCardComponent.vue";
+import Pagination from "@/services/Pagination.js";
 
 import CodeService from "@/services/CodeService.js";
 
@@ -122,8 +166,10 @@ export default {
   data() {
     return {
       search: null,
-      page: 1,
-      pageCount: 200,
+      page: {
+        currentPage: 1,
+        pages: null,
+      },
     };
   },
 
@@ -131,9 +177,13 @@ export default {
     async getCodes() {
       return CodeService.getCodes(this.page);
     },
+    updatePage(newPage) {
+      this.page = Pagination(200, newPage, 7, 7);
+    },
   },
 
   mounted() {
+    this.page = Pagination(200, 1, 7, 7);
     this.$emit("overlay", false);
   },
 
