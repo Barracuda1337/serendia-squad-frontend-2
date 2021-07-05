@@ -135,9 +135,6 @@
 export default {
   mounted() {
     this.$emit("overlay", false);
-    new Quill("#editor", {
-      theme: "snow",
-    });
   },
 
   data() {

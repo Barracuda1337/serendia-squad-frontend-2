@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import eventHub from '@/services/EventHub'
+import eventHub from "@/services/EventHub";
 
 export default {
   data() {

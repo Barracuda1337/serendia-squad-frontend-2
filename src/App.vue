@@ -5,7 +5,11 @@
     <NavbarComponent />
     <DefaultModal />
     <div class="lg:container md:container sm:container sm:max-w-full sm:px-4">
-      <router-view :user="user" @add:toast="list.push($event)" @overlay="active = $event" />
+      <router-view
+        :user="user"
+        @add:toast="list.push($event)"
+        @overlay="active = $event"
+      />
     </div>
   </div>
 </template>
@@ -22,8 +26,8 @@ export default {
       active: true,
       list: [],
       user: {
-        authorized: true
-      }
+        authorized: true,
+      },
     };
   },
 

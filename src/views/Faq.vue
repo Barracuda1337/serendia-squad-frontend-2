@@ -1,11 +1,11 @@
 <template>
-  <div id="faq">
+  <div id="faq" class="pb-4">
     <div class="text-center mb-4">
       <h1 class="text-4xl font-bold">S.S.S.</h1>
       <p>Site hakkında bilmediğiniz çoğu bilgiye buradan erişebilirsiniz.</p>
     </div>
     <div class="block rounded bg-c2 w-full p-4">
-      <h1 class="text-3xl font-semibold text-center sm:text-left">
+      <h1 class="text-2xl font-semibold text-center sm:text-left">
         Nasıl kodlara erişebilirim?
       </h1>
       <p class="my-2">
@@ -39,12 +39,50 @@
       </ol>
     </div>
     <div class="mt-4 block rounded bg-c2 w-full p-4">
-      <h1 class="text-3xl font-semibold text-center sm:text-left">
-        Nereden Yardım Alabilirim?
+      <h1 class="text-2xl font-semibold text-center sm:text-left">
+        Nasıl Yardım Alabilirim?
       </h1>
       <p class="my-2">
         <span class="bg-purple-500 rounded p-1">Serendia Squad</span>'ın Discord
         sunucuna katılıp oradaki yardım kanalından yardım alabilirsin.
+      </p>
+    </div>
+    <div class="mt-4 block rounded bg-c2 w-full p-4">
+      <h1 class="text-2xl font-semibold text-center sm:text-left">
+        Yanlış çalışan bir kod gördüm. Ne yapmalıyım?
+      </h1>
+      <p class="my-2">
+        Dilersen bu sorunu site üzerindeki
+        <span class="p-1 bg-red-600 rounded">HATA RAPORLAMA</span> üzerinden
+        bize bildirebilirsin ya da
+        <span class="bg-purple-500 rounded p-1">Serendia Squad</span>'a gelip
+        yetkililerimize bu kodun çalışıp çalışmadığını sorabilirsin.
+      </p>
+    </div>
+    <div class="mt-4 block rounded bg-c2 w-full p-4">
+      <h1 class="text-2xl font-semibold text-center sm:text-left">
+        İstek kodlarım var. Bu kodları nasıl yaptırabilirim?
+      </h1>
+      <p class="my-2">
+        <span class="bg-purple-500 rounded p-1">Serendia Squad</span> sunucusu
+        üzerinden
+        <span
+          class="rounded p-1 bg-yellow-500"
+          v-text="'!istek <isteğin>'"
+        ></span>
+        komutunu kullanarak istediğin kodu yetkililerimizden rica edebilirsin.
+        Fazla oy alan kodlar yapılmaya daha yakın kodlardır.
+      </p>
+    </div>
+    <div class="mt-4 block rounded bg-c2 w-full p-4">
+      <h1 class="text-2xl font-semibold text-center sm:text-left">
+        Site üzerinde bir hata tespit ettim, kime başvurmalıyım?
+      </h1>
+      <p class="my-2">
+        Site üzerindeki bulduğun hatayı bize bildirmek için
+        <span class="bg-purple-500 rounded p-1">Serendia Squad</span>
+        sunucusuna veya Alosha#3779'e bildirebilirsin. Hataları bildirdiğin için
+        teşekkürler!
       </p>
     </div>
   </div>
