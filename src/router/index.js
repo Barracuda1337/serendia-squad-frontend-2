@@ -20,6 +20,11 @@ const routes = [
     component: () => import('../views/Code/Code.vue')
   },
   {
+    path: '/panel/share',
+    name: 'CodeShare',
+    component: () => import('../views/Code/CodeShare.vue')
+  },
+  {
     path: '/faq',
     name: 'FAQ',
     component: () => import('../views/Faq.vue')

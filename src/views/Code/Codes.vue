@@ -116,10 +116,10 @@
             v-if="user"
             class="
               p-2
-              bg-green-700
+              bg-green-600
               cursor-pointer
               transition
-              hover:bg-green-800
+              hover:bg-green-700
               transform
               hover:scale-105
               rounded
@@ -134,10 +134,10 @@
             v-if="user && user.authorized"
             class="
               p-2
-              bg-yellow-700
+              bg-yellow-600
               cursor-pointer
               transition
-              hover:bg-yellow-800
+              hover:bg-yellow-700
               transform
               hover:scale-105
               rounded

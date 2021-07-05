@@ -20,7 +20,7 @@
     v-bind:class="{ hidden: !active }"
   >
     <div class="mx-4 my-2 p-4 bg-c3 rounded">
-      <h1 class="text-3xl mb-2">
+      <h1 class="text-3xl font-semibold mb-2">
         {{ header }}
       </h1>
       <p>
