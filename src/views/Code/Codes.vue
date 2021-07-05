@@ -111,44 +111,24 @@
         >
           En Son Güncellenen
         </button>
-        <div class="flex w-full justify-center">
-          <button
-            v-if="user"
-            class="
-              p-2
-              bg-green-600
-              cursor-pointer
-              transition
-              hover:bg-green-700
-              transform
-              hover:scale-105
-              rounded
-              m-1
-              focus:outline-none
-              justify-self-stretch
-            "
-          >
-            Kod Paylaş
-          </button>
-          <button
-            v-if="user && user.authorized"
-            class="
-              p-2
-              bg-yellow-600
-              cursor-pointer
-              transition
-              hover:bg-yellow-700
-              transform
-              hover:scale-105
-              rounded
-              m-1
-              focus:outline-none
-              justify-self-stretch
-            "
-          >
-            İnceleme Bekleyen Kodlar
-          </button>
-        </div>
+        <button
+          v-if="user"
+          class="
+            p-2
+            bg-green-600
+            cursor-pointer
+            transition
+            hover:bg-green-700
+            transform
+            hover:scale-105
+            rounded
+            m-1
+            focus:outline-none
+            justify-self-stretch
+          "
+        >
+          Kod Paylaş
+        </button>
       </div>
     </div>
 

@@ -85,6 +85,36 @@
         teşekkürler!
       </p>
     </div>
+    <div class="mt-4 block rounded bg-c2 w-full p-4">
+      <h1 class="text-2xl font-semibold text-center sm:text-left">
+        Booster kişiler ne gibi özellikler alıyor?
+      </h1>
+      <p class="my-2">
+        Booster üyelerimiz için aşağıdaki gibi avantajlarımız mevcut. (Tek boost
+        basmak yeterlidir.)
+      </p>
+    </div>
+    <div class="mt-4 block rounded bg-c2 w-full p-4">
+      <h1 class="text-2xl font-semibold text-center sm:text-left">
+        Bir kodun içeriği ToS'a uymuyor veya sunucuya zarar verebilecek
+        içerikler taşıyorsa ne yapmalıyım?
+      </h1>
+      <p class="my-2">
+        Bu kodu kullanmadan hemen önce bize başvurmalısın. <span class="bg-purple-500 rounded p-1">Serendia Squad</span>
+        sunucusuna gelerek bize kodu bildir ve senin için incelemelere
+        başlayalım.
+      </p>
+    </div>
+    <div class="mt-4 block rounded bg-c2 w-full p-4">
+      <h1 class="text-2xl font-semibold text-center sm:text-left">
+        Projelerimi nasıl paylaşabilirim?
+      </h1>
+      <p class="my-2">
+        <span class="bg-purple-500 rounded p-1">Serendia Squad</span> sunucusunda #projects odasındaki paylaşımlara dahil olmak
+        istersen yapman gereken bir kaç kural var. Bu kuralları öğrenmek için
+        projeler odasına gidip sabitlenen mesajları okuman yeterli olacak.
+      </p>
+    </div>
   </div>
 </template>
 
