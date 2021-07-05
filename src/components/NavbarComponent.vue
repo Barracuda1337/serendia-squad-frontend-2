@@ -98,6 +98,7 @@
                 </svg>
               </div>
               <Dropdown
+                v-model="dropdown"
                 class="w-full sm:w-48"
                 v-if="nav.dropdown"
                 :status="nav.active"
@@ -164,38 +165,27 @@ export default {
   },
   data() {
     return {
+      dropdown: null,
       navs: [
         {
           name: "Kodlar",
           to: "/codes",
           dropdown: true,
-          items: [
-            { name: "JavaScript", to: "/codes" },
-            { name: "HTML/CSS", to: "/codes" },
-            { name: "Diğer", to: "/codes" },
-          ],
+          items: ["JavaScript", "HTML/CSS", "Diğer"],
           active: false,
         },
         {
           name: "Özel Kodlar",
           to: "/codes",
           dropdown: true,
-          items: [
-            { name: "Hazır Altyapılar", to: "/codes" },
-            { name: "Elmas", to: "/codes" },
-            { name: "Altın", to: "/codes" },
-          ],
+          items: ["Hazır Altyapılar", "Projeler", "Diğer"],
           active: false,
         },
         {
           name: "Servisler",
           to: "/services",
           dropdown: true,
-          items: [
-            { name: "Uptime", to: "/codes" },
-            { name: "Kod Çevirici", to: "/codes" },
-            { name: "Basit Araçlar", to: "/codes" },
-          ],
+          items: ["Uptime", "Kod Çevirici", "Araçlar"],
           active: false,
         },
         { name: "S.S.S.", to: "/faq", dropdown: false, active: false },
@@ -203,5 +193,12 @@ export default {
       active: false,
     };
   },
+
+  watch: {
+    dropdown(n) {
+      this.$route.push(n);
+    }
+  }
+
 };
 </script>

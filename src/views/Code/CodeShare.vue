@@ -9,7 +9,7 @@
       </p>
     </div>
     <div class="content flex flex-wrap">
-      <div class="w-4/6 p-4">
+      <div class="w-full sm:w-4/6 p-4">
         <input
           class="
             w-full
@@ -26,7 +26,7 @@
           placeholder="Kod Adı..."
         />
       </div>
-      <div class="w-2/6 p-4">
+      <div class="w-full sm:w-2/6 p-4">
         <button
           class="
             text-xl
@@ -39,9 +39,20 @@
             transition
             focus:outline-none
             hover:bg-c3
+            relative
           "
+          @click="active = !active"
         >
-          Kategori
+          Kategori: {{ kategori }}
+          <CustomDropdown
+            class="w-full"
+            :status="active"
+            :items="[
+              { name: 'Elmas', to: 'asd' },
+              { name: 'Altın', to: 'asd' },
+              { name: 'Normal', to: 'asd' },
+            ]"
+          />
         </button>
       </div>
       <div class="w-full p-4">
@@ -62,21 +73,9 @@
         />
       </div>
       <div class="w-full text-white p-4">
-        <div
-          id="editor"
-          class="
-            w-full
-            text-xl
-            sm:text-2xl
-            p-4
-            rounded
-            bg-c2
-            transition
-            focus:outline-none
-            focus:ring focus:ring-c3
-          "
-          placeholder="Sayfa İçeriği..."
-        ></div>
+        <div class="w-full font-semibold text-xl sm:text-2xl p-4 rounded bg-c2">
+          <VueEditor class="font-medium" v-model="content" />
+        </div>
       </div>
       <div class="w-full p-4">
         <textarea
@@ -132,15 +131,50 @@
 </template>
 
 <script>
+import { VueEditor } from "vue2-editor";
+import CustomDropdown from "@/components/Dropdowns/CustomDropdown.vue";
+
 export default {
   mounted() {
     this.$emit("overlay", false);
+  },
+  components: {
+    VueEditor,
+    CustomDropdown,
   },
 
   data() {
     return {
       code: "",
+      active: false,
+      content: null,
+      kategori: "Seçilmedi",
     };
   },
 };
 </script>
+
+
+<style lang="scss">
+.quillWrapper {
+  [type="button"] * {
+    stroke: whitesmoke !important;
+  }
+
+  [type="button"]:hover * {
+    stroke: rgba(245, 245, 245, 0.699) !important;
+  }
+
+  [role="button"] * {
+    stroke: whitesmoke !important;
+  }
+
+  [role="button"]:hover * {
+    stroke: rgba(245, 245, 245, 0.699) !important;
+  }
+
+  .ql-picker-label::before {
+    color: whitesmoke;
+  }
+}
+</style>
