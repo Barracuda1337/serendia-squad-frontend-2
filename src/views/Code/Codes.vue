@@ -109,13 +109,14 @@
         @click="updatePage(page.currentPage - 1)"
         class="
           p-2
+          mr-2
           rounded-l
           text-center
           bg-c2
           w-10
           text-xl
           hover:bg-c3
-          text-semibold
+          text-bold
           focus:outline-none
         "
         v-text="'<'"
@@ -125,10 +126,11 @@
         :key="i"
         class="
           text-center
+          mx-1
           p-2
           w-10
           hover:bg-c3
-          text-xl text-semibold
+          text-xl text-bold
           bg-c2
           focus:outline-none
         "
@@ -140,13 +142,14 @@
         @click="updatePage(page.currentPage + 1)"
         class="
           p-2
+          ml-2
           w-10
           rounded-r
           text-center
           bg-c2
           text-xl
           hover:bg-c3
-          text-semibold
+          text-bold
           focus:outline-none
         "
         v-text="'>'"
