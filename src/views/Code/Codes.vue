@@ -9,13 +9,13 @@
       </p>
     </div>
     <!-- Search Box -->
-    <div id="search" class="flex flex-col items-center my-2">
+    <div id="search" class="w-full flex flex-col items-center my-2">
       <CodeSearchComponent class="tutorial" @update:search="search = $event" />
       <div
         id="shortcuts"
-        class="mt-2 text-center justify-center flex flex-wrap w-6/6"
+        class="w-full mt-2 text-center justify-center flex flex-wrap w-6/6"
       >
-        <div
+        <button
           class="
             p-2
             bg-c2
@@ -26,11 +26,12 @@
             hover:scale-105
             rounded
             m-1
+            focus:outline-none
           "
         >
           En Çok Beğenilen
-        </div>
-        <div
+        </button>
+        <button
           class="
             p-2
             bg-c2
@@ -41,11 +42,12 @@
             hover:scale-105
             rounded
             m-1
+            focus:outline-none
           "
         >
           En Çok Yorumlanan
-        </div>
-        <div
+        </button>
+        <button
           class="
             p-2
             bg-c2
@@ -56,11 +58,12 @@
             hover:scale-105
             rounded
             m-1
+            focus:outline-none
           "
         >
           En Çok Görüntülenen
-        </div>
-        <div
+        </button>
+        <button
           class="
             p-2
             bg-c2
@@ -71,11 +74,12 @@
             hover:scale-105
             rounded
             m-1
+            focus:outline-none
           "
         >
           En Yeni
-        </div>
-        <div
+        </button>
+        <button
           class="
             p-2
             bg-c2
@@ -86,9 +90,64 @@
             hover:scale-105
             rounded
             m-1
+            focus:outline-none
           "
         >
           En Eski
+        </button>
+        <button
+          class="
+            p-2
+            bg-c2
+            cursor-pointer
+            transition
+            hover:bg-c3
+            transform
+            hover:scale-105
+            rounded
+            m-1
+            focus:outline-none
+          "
+        >
+          En Son Güncellenen
+        </button>
+        <div class="flex w-full justify-center">
+          <button
+            v-if="user"
+            class="
+              p-2
+              bg-green-700
+              cursor-pointer
+              transition
+              hover:bg-green-800
+              transform
+              hover:scale-105
+              rounded
+              m-1
+              focus:outline-none
+              justify-self-stretch
+            "
+          >
+            Kod Paylaş
+          </button>
+          <button
+            v-if="user && user.authorized"
+            class="
+              p-2
+              bg-yellow-700
+              cursor-pointer
+              transition
+              hover:bg-yellow-800
+              transform
+              hover:scale-105
+              rounded
+              m-1
+              focus:outline-none
+              justify-self-stretch
+            "
+          >
+            İnceleme Bekleyen Kodlar
+          </button>
         </div>
       </div>
     </div>
@@ -166,6 +225,7 @@ import Pagination from "@/services/Pagination.js";
 import CodeService from "@/services/CodeService.js";
 
 export default {
+  props: ["user"],
   data() {
     return {
       search: null,
