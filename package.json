@@ -19,8 +19,8 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
-    "vue2-editor": "^2.10.2",
-	"vue2-ace-editor": "^0.0.15"
+    "vue2-ace-editor": "^0.0.15",
+    "vue2-editor": "^2.10.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -33,7 +33,6 @@
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vue-cli-plugin-tailwind": "~2.0.6",
-    "vue-template-compiler": "^2.6.11",
-    "vue2-ace-editor": "^0.0.15"
+    "vue-template-compiler": "^2.6.11"
   }
 }
