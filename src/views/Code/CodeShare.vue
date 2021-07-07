@@ -74,24 +74,28 @@
       </div>
       <div class="w-full text-white p-4">
         <div class="w-full font-semibold text-xl sm:text-2xl p-4 rounded bg-c2">
+          <h1>Sayfa İçeriği:</h1>
           <VueEditor class="font-medium" v-model="content" />
         </div>
       </div>
       <div class="w-full p-4">
-        <editor
-          class="
+        <div class="w-full font-semibold text-xl sm:text-2xl p-4 rounded bg-c2">
+          <h1>Kod:</h1>
+          <editor
+            class="
             w-full
             p-2
             rounded
             bg-c2
           "
-          v-model="code"
-          @init="editorInit"
-          lang="javascript"
-          theme="merbivore_soft"
-          width="100%"
-          height="400px"
-        ></editor>
+            v-model="code"
+            @init="editorInit"
+            lang="javascript"
+            theme="merbivore_soft"
+            width="100%"
+            height="500px"
+          ></editor>
+        </div>
       </div>
       <div class="w-full p-4 flex justify-end">
         <button
