@@ -196,7 +196,7 @@ export default {
 
   watch: {
     dropdown(n) {
-      this.$route.push(n);
+      console.log(n);
     }
   }
 

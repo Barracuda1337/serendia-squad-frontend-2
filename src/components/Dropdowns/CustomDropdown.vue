@@ -10,7 +10,7 @@
     "
     v-bind:class="{ hidden: !this.status }"
   >
-    <div class="py-2 bg-c2 rounded-lg">
+    <div class="py-2 px-2 bg-c2 rounded-lg">
       <div
         v-for="(item, i) in items"
         :key="i"
@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  props: ["items", "status"],
+  props: ["items", "status", "input"],
   model: {
     prop: "input",
     event: "change",
@@ -40,7 +40,6 @@ export default {
   methods: {
     handleInput(input) {
       this.value = input;
-      console.log("hello")
       this.$emit("input", this.value);
     },
   },
