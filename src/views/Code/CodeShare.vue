@@ -153,7 +153,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .quillWrapper {
   [type="button"] * {
     stroke: whitesmoke !important;
