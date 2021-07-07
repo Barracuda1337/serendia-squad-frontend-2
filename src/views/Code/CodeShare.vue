@@ -48,9 +48,9 @@
             class="w-full"
             :status="active"
             :items="[
-              { name: 'Elmas', to: 'asd' },
-              { name: 'Altın', to: 'asd' },
-              { name: 'Normal', to: 'asd' },
+              { name: 'Elmas', onClick: (v) => (kategori = v) },
+              { name: 'Altın', onClick: (v) => (kategori = v) },
+              { name: 'Normal', onClick: (v) => (kategori = v) },
             ]"
           />
         </button>
@@ -153,7 +153,6 @@ export default {
   },
 };
 </script>
-
 
 <style lang="scss">
 .quillWrapper {

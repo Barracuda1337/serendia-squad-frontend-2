@@ -29,7 +29,7 @@ export default {
 
   methods: {
     handleInput(item) {
-      item.onClick();
+      item.onClick(item.name);
     },
   },
 };
