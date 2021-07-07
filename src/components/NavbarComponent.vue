@@ -102,7 +102,7 @@
                 class="w-full sm:w-48"
                 v-if="nav.dropdown"
                 :status="nav.active"
-                :items="nav.items || []"
+                :items="nav.items"
               />
             </div>
           </div>
@@ -171,21 +171,78 @@ export default {
           name: "Kodlar",
           to: "/codes",
           dropdown: true,
-          items: ["JavaScript", "HTML/CSS", "Diğer"],
+          items: [
+            {
+              name: "JavaScript",
+              onClick: () => {
+                this.$router.push("/codes");
+              },
+            },
+            {
+              name: "HTML/CSS",
+              onClick: () => {
+                this.$router.push("/codes");
+              },
+            },
+            {
+              name: "Diğer",
+              onClick: () => {
+                this.$router.push("/codes");
+              },
+            },
+          ],
           active: false,
         },
         {
           name: "Özel Kodlar",
           to: "/codes",
           dropdown: true,
-          items: ["Hazır Altyapılar", "Projeler", "Diğer"],
+          items: [
+            {
+              name: "Hazır Altyapılar",
+              onClick: () => {
+                this.$router.push("/codes");
+              },
+            },
+            {
+              name: "Projeler",
+              onClick: () => {
+                this.$router.push("/codes");
+              },
+            },
+            {
+              name: "Diğer",
+              onClick: () => {
+                this.$router.push("/codes");
+              },
+            },
+          ],
           active: false,
         },
         {
           name: "Servisler",
           to: "/services",
           dropdown: true,
-          items: ["Uptime", "Kod Çevirici", "Araçlar"],
+          items: [
+            {
+              name: "Uptime",
+              onClick: () => {
+                this.$router.push("/codes");
+              },
+            },
+            {
+              name: "Kod Çevirici",
+              onClick: () => {
+                this.$router.push("/codes");
+              },
+            },
+            {
+              name: "Araçlar",
+              onClick: () => {
+                this.$router.push("/codes");
+              },
+            },
+          ],
           active: false,
         },
         { name: "S.S.S.", to: "/faq", dropdown: false, active: false },
@@ -193,12 +250,5 @@ export default {
       active: false,
     };
   },
-
-  watch: {
-    dropdown(n) {
-      console.log(n);
-    }
-  }
-
 };
 </script>

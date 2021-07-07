@@ -8,7 +8,7 @@
       sm:transform
       sm:translate-y-full
     "
-    v-bind:class="{ hidden: !this.status }"
+    v-bind:class="{ hidden: !status }"
   >
     <div class="py-2 px-2 bg-c2 rounded-lg">
       <div
@@ -17,7 +17,7 @@
         class="block px-4 py-2 rounded hover:bg-c3"
         @click="handleInput(item)"
       >
-        {{ item }}
+        {{ item.name }}
       </div>
     </div>
   </div>
@@ -25,22 +25,11 @@
 
 <script>
 export default {
-  props: ["items", "status", "input"],
-  model: {
-    prop: "input",
-    event: "change",
-  },
-
-  data() {
-    return {
-      value: null,
-    };
-  },
+  props: ["status", "items"],
 
   methods: {
-    handleInput(input) {
-      this.value = input;
-      this.$emit("input", this.value);
+    handleInput(item) {
+      item.onClick();
     },
   },
 };
