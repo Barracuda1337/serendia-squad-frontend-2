@@ -20,7 +20,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .toast {
   animation-name: fade;
   animation-duration: 1s;

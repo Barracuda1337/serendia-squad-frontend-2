@@ -74,13 +74,13 @@
       </div>
       <div class="w-full text-white p-4">
         <div class="w-full font-semibold text-xl sm:text-2xl p-4 rounded bg-c2">
-          <h1>Sayfa İçeriği:</h1>
+          <h3>Sayfa İçeriği:</h3>
           <VueEditor class="font-medium" v-model="content" />
         </div>
       </div>
       <div class="w-full p-4">
         <div class="w-full font-semibold text-xl sm:text-2xl p-4 rounded bg-c2">
-          <h1>Kod:</h1>
+          <h3>Kod:</h3>
           <editor
             class="
             w-full
@@ -153,7 +153,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .quillWrapper {
   [type="button"] * {
     stroke: whitesmoke !important;
