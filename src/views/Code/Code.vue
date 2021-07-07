@@ -198,7 +198,7 @@ data.set("mail", "aloshai@aloshai.com"); // => "aloshai@aloshai.com"
 
 data.delete("mail"); // => Promise<void>
 
-// addition and subtraction 
+// addition and subtraction
 data.add("wallet", 10); // => 1510
 data.subtract("wallet", 1000); // => 510
 
