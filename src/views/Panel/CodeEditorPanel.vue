@@ -23,6 +23,7 @@
             focus:outline-none
             focus:ring focus:ring-c3
           "
+          v-model="code.name"
           placeholder="Kod Adı..."
         />
       </div>
@@ -43,14 +44,14 @@
           "
           @click="active = !active"
         >
-          Kategori: {{ kategori }}
+          Kategori: {{ code.category }}
           <CustomDropdown
             class="w-full"
             :status="active"
             :items="[
-              { name: 'Elmas', onClick: (v) => (kategori = v) },
-              { name: 'Altın', onClick: (v) => (kategori = v) },
-              { name: 'Normal', onClick: (v) => (kategori = v) },
+              { name: 'Elmas', onClick: (v) => (code.category = v) },
+              { name: 'Altın', onClick: (v) => (code.category = v) },
+              { name: 'Normal', onClick: (v) => (code.category = v) },
             ]"
           />
         </button>
@@ -69,13 +70,14 @@
             focus:outline-none
             focus:ring focus:ring-c3
           "
+          v-model="code.description"
           placeholder="Kod Açıklaması..."
         />
       </div>
       <div class="w-full text-white p-4">
         <div class="w-full font-semibold text-xl sm:text-2xl p-4 rounded bg-c2">
           <h3>Sayfa İçeriği:</h3>
-          <VueEditor class="font-medium" v-model="content" />
+          <VueEditor class="font-medium" v-model="code.content" />
         </div>
       </div>
       <div class="w-full p-4">
@@ -88,7 +90,7 @@
             rounded
             bg-c2
           "
-            v-model="code"
+            v-model="code.code"
             @init="editorInit"
             lang="javascript"
             theme="merbivore_soft"
@@ -123,11 +125,14 @@
 <script>
 import { VueEditor } from "vue2-editor";
 import CustomDropdown from "@/components/Dropdowns/CustomDropdown.vue";
+import CodeService from "@/services/CodeService.js";
 
 export default {
-  mounted() {
+  async mounted() {
+    await this.beginPage();
     this.$emit("overlay", false);
   },
+
   components: {
     VueEditor,
     CustomDropdown,
@@ -141,13 +146,44 @@ export default {
       require("brace/theme/merbivore_soft");
       require("brace/snippets/javascript");
     },
+
+    async beginPage() {
+      let type = this.$route.query.type;
+      if (!type) {
+        this.$emit("add:toast", {
+          name: "HATA",
+          description: "Sayfaya giriş yapılırken tanımsız bir tip belirlendi.",
+          delay: 7500,
+          color: "red-600",
+        });
+        return;
+      }
+
+      if (type == "share") {
+        return;
+      }
+
+      if (type == "edit") {
+        let id = this.$route.query.id;
+        if (!id) {
+          // Error Message
+          return;
+        }
+        this.code = await CodeService.getCode(id);
+      }
+    },
   },
   data() {
     return {
-      code: "",
+      code: {
+        name: null,
+        description: null,
+        code: null,
+        content: null,
+        category: "Seçilmedi",
+      },
+      type: null,
       active: false,
-      content: null,
-      kategori: "Seçilmedi",
     };
   },
 };

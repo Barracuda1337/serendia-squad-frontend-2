@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col fixed p-4"
+    class="flex flex-col fixed p-4 z-50"
     v-bind:class="{
       'top-2 right-2': align == 'top-right',
       'top-2 left-2': align == 'top-left',
