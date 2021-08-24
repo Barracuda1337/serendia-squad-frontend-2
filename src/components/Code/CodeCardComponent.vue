@@ -53,7 +53,7 @@
       <div class="w-2/6 flex flex-row w-full justify-end items-center">
         <img
           class="h-8 w-8 outline-none rounded-full mr-1 bg-c3"
-          src="https://cdn.discordapp.com/avatars/558016135052787773/91b97bdd2c1201a644254e92e89bb944.webp?size=2048"
+          src="https://cdn.discordapp.com/avatars/558016135052787773/0c3472678fd7ff9d2c95452a58ce28b0.webp?size=2048"
           loading="lazy"
         />
         <span class="font-medium">Alosha#3779</span>

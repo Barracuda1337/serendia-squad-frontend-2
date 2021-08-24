@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-c2">
+  <nav class="bg-c2 z-50">
     <div
       class="
         navbar
@@ -99,7 +99,7 @@
               </div>
               <Dropdown
                 v-model="dropdown"
-                class="w-full sm:w-48"
+                class="w-full sm:w-48 z-40"
                 v-if="nav.dropdown"
                 :status="nav.active"
                 :items="nav.items"

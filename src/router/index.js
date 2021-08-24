@@ -32,6 +32,11 @@ const router = new VueRouter({
       name: "FAQ",
       component: () => import("../views/Faq.vue"),
     },
+    {
+      path: "/panel",
+      name: "Panel",
+      component: () => import("../views/Panel/Panel.vue"),
+    },
   ],
 });
 
