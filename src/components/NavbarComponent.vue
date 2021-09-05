@@ -175,19 +175,19 @@ export default {
             {
               name: "JavaScript",
               onClick: () => {
-                this.$router.push("/codes");
+                this.$router.push("/codes?category=js");
               },
             },
             {
               name: "HTML/CSS",
               onClick: () => {
-                this.$router.push("/codes");
+                this.$router.push("/codes?category=web");
               },
             },
             {
               name: "Diğer",
               onClick: () => {
-                this.$router.push("/codes");
+                this.$router.push("/codes?category=other");
               },
             },
           ],
