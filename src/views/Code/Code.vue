@@ -5,15 +5,13 @@
       <p
         v-text="
           `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit ipsam
-        natus officia quidem magni inventore, laudantium, minima quisquam
-        mollitia similique ipsa cumque eum doloribus hic maxime velit obcaecati
-        aut nihil.`
+                        natus officia quidem magni inventore, laudantium, minima quisquam
+                        mollitia similique ipsa cumque eum doloribus hic maxime velit obcaecati
+                        aut nihil.`
         "
       ></p>
     </div>
-    <div
-      class="lg:flex lg:flex-row md:flex md:flex-col sm:flex sm:flex-col w-full"
-    >
+    <div class="lg:flex lg:flex-row md:flex md:flex-col sm:flex sm:flex-col w-full">
       <div class="lg:w-2/6 md:w-full p-2">
         <div class="bg-c2 p-4 rounded">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero
@@ -44,51 +42,16 @@
         <highlightjs theme language="javascript" :code="code" />
         <div class="w-full mt-4">
           <button
-            class="
-              focus:outline-none
-              m-1
-              p-2
-              w-24
-              bg-c3
-              transition
-              rounded
-              hover:bg-c1
-            "
+            class="focus:outline-none m-1 p-2 w-24 bg-c3 transition rounded hover:bg-c1"
             @click="copyText(code)"
-          >
-            Kopyala
-          </button>
+          >Kopyala</button>
           <button
-            class="
-              focus:outline-none
-              float-right
-              m-1
-              p-2
-              w-24
-              bg-red-600
-              transition
-              rounded
-              hover:bg-red-900
-            "
+            class="focus:outline-none float-right m-1 p-2 w-24 bg-red-600 transition rounded hover:bg-red-900"
             @click="deleteCode()"
-          >
-            Sil
-          </button>
+          >Sil</button>
           <button
-            class="
-              focus:outline-none
-              float-right
-              m-1
-              p-2
-              w-24
-              bg-c3
-              transition
-              rounded
-              hover:bg-c1
-            "
-          >
-            Düzenle
-          </button>
+            class="focus:outline-none float-right m-1 p-2 w-24 bg-c3 transition rounded hover:bg-c1"
+          >Düzenle</button>
         </div>
       </div>
     </div>
@@ -97,36 +60,14 @@
         <h1 class="uppercase text-2xl font-medium mb-2">Yorumlar</h1>
         <textarea
           v-model="comment"
-          class="
-            bg-c3
-            transition
-            text-2xl
-            p-2
-            focus:outline-none
-            focus:ring focus:ring-c1
-            focus:border-c3
-            h-min
-            rounded
-          "
+          class="bg-c3 transition text-2xl p-2 focus:outline-none focus:ring focus:ring-c1 focus:border-c3 h-min rounded"
           placeholder="Yorumunu belirt..."
         ></textarea>
 
         <div class="w-full mt-4">
           <button
-            class="
-              focus:outline-none
-              float-right
-              m-1
-              p-2
-              w-24
-              bg-c3
-              transition
-              rounded
-              hover:bg-c1
-            "
-          >
-            Gönder
-          </button>
+            class="focus:outline-none float-right m-1 p-2 w-24 bg-c3 transition rounded hover:bg-c1"
+          >Gönder</button>
         </div>
       </div>
     </div>
@@ -152,9 +93,6 @@ export default {
 
   methods: {
     deleteCode() {
-      // if (!this.code.id || !this.user || this.user == null) {
-      //   return;
-      // }
       let id = `delete-code-${this.code.id}`;
       eventHub.$once(id, (result) => {
         if (result == true) {

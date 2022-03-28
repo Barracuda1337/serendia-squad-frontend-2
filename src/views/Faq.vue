@@ -5,12 +5,12 @@
       <p>Site hakkında bilmediğiniz çoğu bilgiye buradan erişebilirsiniz.</p>
     </div>
     <div class="block rounded bg-c2 w-full p-4">
-      <h1 class="text-2xl font-semibold text-center sm:text-left">
-        Nasıl kodlara erişebilirim?
-      </h1>
+      <h1 class="text-2xl font-semibold text-center sm:text-left">Nasıl kodlara erişebilirim?</h1>
       <p class="my-2">
         Sunucu içerisindeki özel kodlar sırasıya
-        <span class="bg-red-500 p-1 rounded">Hazır Altyapılar</span>,
+        <span
+          class="bg-red-500 p-1 rounded"
+        >Hazır Altyapılar</span>,
         <span class="bg-blue-500 p-1 rounded">Elmas</span>,
         <span class="bg-yellow-500 p-1 rounded">Altın</span> ve
         <span class="bg-gray-500 p-1 rounded">Normal</span> olarak kategori
@@ -24,45 +24,49 @@
 
       <ol>
         <li class="mb-2">
-          1- <span class="bg-red-500 p-1 rounded">Hazır Altyapılar</span>: 50
+          1-
+          <span class="bg-red-500 p-1 rounded">Hazır Altyapılar</span>: 50
           Davet
         </li>
         <li class="my-2">
-          2- <span class="bg-blue-500 p-1 rounded">Elmas</span>: 30 Davet
+          2-
+          <span class="bg-blue-500 p-1 rounded">Elmas</span>: 30 Davet
         </li>
         <li class="my-2">
-          3- <span class="bg-yellow-500 p-1 rounded">Altın</span>: 20 Davet
+          3-
+          <span class="bg-yellow-500 p-1 rounded">Altın</span>: 20 Davet
         </li>
         <li class="mt-2">
-          4- <span class="bg-gray-500 p-1 rounded">Normal</span>: Şart yok
+          4-
+          <span class="bg-gray-500 p-1 rounded">Normal</span>: Şart yok
         </li>
       </ol>
     </div>
     <div class="mt-4 block rounded bg-c2 w-full p-4">
-      <h1 class="text-2xl font-semibold text-center sm:text-left">
-        Nasıl Yardım Alabilirim?
-      </h1>
+      <h1 class="text-2xl font-semibold text-center sm:text-left">Nasıl Yardım Alabilirim?</h1>
       <p class="my-2">
         <span class="bg-purple-500 rounded p-1">Serendia Squad</span>'ın Discord
         sunucuna katılıp oradaki yardım kanalından yardım alabilirsin.
       </p>
     </div>
     <div class="mt-4 block rounded bg-c2 w-full p-4">
-      <h1 class="text-2xl font-semibold text-center sm:text-left">
-        Yanlış çalışan bir kod gördüm. Ne yapmalıyım?
-      </h1>
+      <h1
+        class="text-2xl font-semibold text-center sm:text-left"
+      >Yanlış çalışan bir kod gördüm. Ne yapmalıyım?</h1>
       <p class="my-2">
         Dilersen bu sorunu site üzerindeki
         <span class="p-1 bg-red-600 rounded">HATA RAPORLAMA</span> üzerinden
         bize bildirebilirsin ya da
-        <span class="bg-purple-500 rounded p-1">Serendia Squad</span>'a gelip
+        <span
+          class="bg-purple-500 rounded p-1"
+        >Serendia Squad</span>'a gelip
         yetkililerimize bu kodun çalışıp çalışmadığını sorabilirsin.
       </p>
     </div>
     <div class="mt-4 block rounded bg-c2 w-full p-4">
-      <h1 class="text-2xl font-semibold text-center sm:text-left">
-        İstek kodlarım var. Bu kodları nasıl yaptırabilirim?
-      </h1>
+      <h1
+        class="text-2xl font-semibold text-center sm:text-left"
+      >İstek kodlarım var. Bu kodları nasıl yaptırabilirim?</h1>
       <p class="my-2">
         <span class="bg-purple-500 rounded p-1">Serendia Squad</span> sunucusu
         üzerinden
@@ -75,20 +79,22 @@
       </p>
     </div>
     <div class="mt-4 block rounded bg-c2 w-full p-4">
-      <h1 class="text-2xl font-semibold text-center sm:text-left">
-        Site üzerinde bir hata tespit ettim, kime başvurmalıyım?
-      </h1>
+      <h1
+        class="text-2xl font-semibold text-center sm:text-left"
+      >Site üzerinde bir hata tespit ettim, kime başvurmalıyım?</h1>
       <p class="my-2">
         Site üzerindeki bulduğun hatayı bize bildirmek için
-        <span class="bg-purple-500 rounded p-1">Serendia Squad</span>
+        <span
+          class="bg-purple-500 rounded p-1"
+        >Serendia Squad</span>
         sunucusuna veya Alosha#3779'e bildirebilirsin. Hataları bildirdiğin için
         teşekkürler!
       </p>
     </div>
     <div class="mt-4 block rounded bg-c2 w-full p-4">
-      <h1 class="text-2xl font-semibold text-center sm:text-left">
-        Booster kişiler ne gibi özellikler alıyor?
-      </h1>
+      <h1
+        class="text-2xl font-semibold text-center sm:text-left"
+      >Booster kişiler ne gibi özellikler alıyor?</h1>
       <p class="my-2">
         Booster üyelerimiz için aşağıdaki gibi avantajlarımız mevcut. (Tek boost
         basmak yeterlidir.)
@@ -100,15 +106,14 @@
         içerikler taşıyorsa ne yapmalıyım?
       </h1>
       <p class="my-2">
-        Bu kodu kullanmadan hemen önce bize başvurmalısın. <span class="bg-purple-500 rounded p-1">Serendia Squad</span>
+        Bu kodu kullanmadan hemen önce bize başvurmalısın.
+        <span class="bg-purple-500 rounded p-1">Serendia Squad</span>
         sunucusuna gelerek bize kodu bildir ve senin için incelemelere
         başlayalım.
       </p>
     </div>
     <div class="mt-4 block rounded bg-c2 w-full p-4">
-      <h1 class="text-2xl font-semibold text-center sm:text-left">
-        Projelerimi nasıl paylaşabilirim?
-      </h1>
+      <h1 class="text-2xl font-semibold text-center sm:text-left">Projelerimi nasıl paylaşabilirim?</h1>
       <p class="my-2">
         <span class="bg-purple-500 rounded p-1">Serendia Squad</span> sunucusunda #projects odasındaki paylaşımlara dahil olmak
         istersen yapman gereken bir kaç kural var. Bu kuralları öğrenmek için

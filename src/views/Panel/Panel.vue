@@ -4,17 +4,7 @@
       <div class="w-72 mx-6">
         <div
           @click="select = 'codes'"
-          class="
-            cursor-pointer
-            transition
-            transform
-            hover:scale-105
-            w-full
-            p-4
-            rounded
-            bg-c2
-            text-center
-          "
+          class="cursor-pointer transition transform hover:scale-105 w-full p-4 rounded bg-c2 text-center"
         >
           <lottie-player
             class="h-96"
@@ -23,25 +13,13 @@
             speed="1"
             autoplay
           ></lottie-player>
-          <h1 class="text-2xl tracking-widest font-medium uppercase">
-            Kodları İncele
-          </h1>
+          <h1 class="text-2xl tracking-widest font-medium uppercase">Kodları İncele</h1>
         </div>
       </div>
       <div class="w-72 mx-6">
         <div
           @click="select = 'badges'"
-          class="
-            cursor-pointer
-            transition
-            transform
-            hover:scale-105
-            w-full
-            p-4
-            rounded
-            bg-c2
-            text-center
-          "
+          class="cursor-pointer transition transform hover:scale-105 w-full p-4 rounded bg-c2 text-center"
         >
           <lottie-player
             class="h-96"
@@ -50,25 +28,13 @@
             speed="1"
             autoplay
           ></lottie-player>
-          <h1 class="text-2xl tracking-widest font-medium uppercase">
-            ROZETLER
-          </h1>
+          <h1 class="text-2xl tracking-widest font-medium uppercase">ROZETLER</h1>
         </div>
       </div>
       <div class="w-72 mx-6">
         <div
           @click="select = 'users'"
-          class="
-            cursor-pointer
-            transition
-            transform
-            hover:scale-105
-            w-full
-            p-4
-            rounded
-            bg-c2
-            text-center
-          "
+          class="cursor-pointer transition transform hover:scale-105 w-full p-4 rounded bg-c2 text-center"
         >
           <lottie-player
             class="h-96"
@@ -77,9 +43,7 @@
             speed="1"
             autoplay
           ></lottie-player>
-          <h1 class="text-2xl tracking-widest font-medium uppercase">
-            KULLANICILAR
-          </h1>
+          <h1 class="text-2xl tracking-widest font-medium uppercase">KULLANICILAR</h1>
         </div>
       </div>
     </div>

@@ -1,18 +1,6 @@
 <template>
   <div
-    class="
-      flex flex-col
-      bg-c2
-      w-full
-      h-full
-      p-2
-      rounded-md
-      transition
-      transform
-      hover:scale-105
-      hover:bg-c3
-      cursor-pointer
-    "
+    class="flex flex-col bg-c2 w-full h-full p-2 rounded-md transition transform hover:scale-105 hover:bg-c3 cursor-pointer"
   >
     <h1 class="text-xl font-semibold mb-2">Lorem Ipsum</h1>
     <p class="flex-grow">

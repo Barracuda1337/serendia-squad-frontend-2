@@ -1,12 +1,6 @@
 <template>
   <div class="search-box flex items-center">
-    <input
-      @input="handleInput"
-      class="search-txt"
-      type="text"
-      name=""
-      placeholder="Arama..."
-    />
+    <input @input="handleInput" class="search-txt" type="text" name placeholder="Arama..." />
     <router-link to="/codes" class="search-btn">
       <i class="fas fa-search"></i>
     </router-link>

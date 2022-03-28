@@ -11,124 +11,29 @@
     <!-- Search Box -->
     <div id="search" class="w-full flex flex-col items-center my-2">
       <CodeSearchComponent class="tutorial" @update:search="search = $event" />
-      <div
-        id="shortcuts"
-        class="w-full mt-2 text-center justify-center flex flex-wrap w-6/6"
-      >
+      <div id="shortcuts" class="w-full mt-2 text-center justify-center flex flex-wrap w-6/6">
         <button
-          class="
-            p-2
-            bg-c2
-            cursor-pointer
-            transition
-            hover:bg-c3
-            transform
-            hover:scale-105
-            rounded
-            m-1
-            focus:outline-none
-          "
-        >
-          En Çok Beğenilen
-        </button>
+          class="p-2 bg-c2 cursor-pointer transition hover:bg-c3 transform hover:scale-105 rounded m-1 focus:outline-none"
+        >En Çok Beğenilen</button>
         <button
-          class="
-            p-2
-            bg-c2
-            cursor-pointer
-            transition
-            hover:bg-c3
-            transform
-            hover:scale-105
-            rounded
-            m-1
-            focus:outline-none
-          "
-        >
-          En Çok Yorumlanan
-        </button>
+          class="p-2 bg-c2 cursor-pointer transition hover:bg-c3 transform hover:scale-105 rounded m-1 focus:outline-none"
+        >En Çok Yorumlanan</button>
         <button
-          class="
-            p-2
-            bg-c2
-            cursor-pointer
-            transition
-            hover:bg-c3
-            transform
-            hover:scale-105
-            rounded
-            m-1
-            focus:outline-none
-          "
-        >
-          En Çok Görüntülenen
-        </button>
+          class="p-2 bg-c2 cursor-pointer transition hover:bg-c3 transform hover:scale-105 rounded m-1 focus:outline-none"
+        >En Çok Görüntülenen</button>
         <button
-          class="
-            p-2
-            bg-c2
-            cursor-pointer
-            transition
-            hover:bg-c3
-            transform
-            hover:scale-105
-            rounded
-            m-1
-            focus:outline-none
-          "
-        >
-          En Yeni
-        </button>
+          class="p-2 bg-c2 cursor-pointer transition hover:bg-c3 transform hover:scale-105 rounded m-1 focus:outline-none"
+        >En Yeni</button>
         <button
-          class="
-            p-2
-            bg-c2
-            cursor-pointer
-            transition
-            hover:bg-c3
-            transform
-            hover:scale-105
-            rounded
-            m-1
-            focus:outline-none
-          "
-        >
-          En Eski
-        </button>
+          class="p-2 bg-c2 cursor-pointer transition hover:bg-c3 transform hover:scale-105 rounded m-1 focus:outline-none"
+        >En Eski</button>
         <button
-          class="
-            p-2
-            bg-c2
-            cursor-pointer
-            transition
-            hover:bg-c3
-            transform
-            hover:scale-105
-            rounded
-            m-1
-            focus:outline-none
-          "
-        >
-          En Son Güncellenen
-        </button>
+          class="p-2 bg-c2 cursor-pointer transition hover:bg-c3 transform hover:scale-105 rounded m-1 focus:outline-none"
+        >En Son Güncellenen</button>
         <button
           v-if="user"
-          class="
-            p-2
-            bg-green-600
-            cursor-pointer
-            transition
-            hover:bg-green-700
-            transform
-            hover:scale-105
-            rounded
-            m-1
-            focus:outline-none
-            justify-self-stretch
-          "
-        >
-          Kod Paylaş
-        </button>
+          class="p-2 bg-green-600 cursor-pointer transition hover:bg-green-700 transform hover:scale-105 rounded m-1 focus:outline-none justify-self-stretch"
+        >Kod Paylaş</button>
       </div>
     </div>
 
@@ -146,51 +51,20 @@
     <div class="my-4 flex flex-wrap w-full justify-center">
       <button
         @click="updatePage(page.currentPage - 1)"
-        class="
-          p-2
-          mr-2
-          rounded-l
-          text-center
-          bg-c2
-          w-10
-          text-xl
-          hover:bg-c3
-          text-bold
-          focus:outline-none
-        "
+        class="p-2 mr-2 rounded-l text-center bg-c2 w-10 text-xl hover:bg-c3 text-bold focus:outline-none"
         v-text="'<'"
       ></button>
       <button
         v-for="(v, i) in page.pages"
         :key="i"
-        class="
-          text-center
-          mx-1
-          p-2
-          w-10
-          hover:bg-c3
-          text-xl text-bold
-          bg-c2
-          focus:outline-none
-        "
+        class="text-center mx-1 p-2 w-10 hover:bg-c3 text-xl text-bold bg-c2 focus:outline-none"
         v-bind:class="{ 'bg-c3': v == page.currentPage }"
         @click="updatePage(v)"
         v-text="v"
       ></button>
       <button
         @click="updatePage(page.currentPage + 1)"
-        class="
-          p-2
-          ml-2
-          w-10
-          rounded-r
-          text-center
-          bg-c2
-          text-xl
-          hover:bg-c3
-          text-bold
-          focus:outline-none
-        "
+        class="p-2 ml-2 w-10 rounded-r text-center bg-c2 text-xl hover:bg-c3 text-bold focus:outline-none"
         v-text="'>'"
       ></button>
     </div>
